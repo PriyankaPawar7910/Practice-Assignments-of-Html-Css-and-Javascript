@@ -1,0 +1,25 @@
+<!--Javascript Leap Year-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leap Year</title>
+    </head>
+    <body>
+        <p>Enter Year:
+        <input type="number" id="year"/></p>
+        <input type="button" onclick="Calculate()" value="Check Leap Year"/>
+        <p id="demo"></p>
+
+        <script type="text/javascript">
+        function Calculate(){
+            var x = document.getElementById("year").value;
+            if(x%4==0 && X%100!==0){
+                document.getElementById("demo").innerHTML="Leap Year";
+            }
+            else{
+                document.getElementById("demo").innerHTML="Not Leap Year";
+            }
+        }
+        </script>
+    </body>
+</html>

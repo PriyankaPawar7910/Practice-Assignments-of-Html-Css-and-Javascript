@@ -1,0 +1,41 @@
+<!--Javascript- Event Handling - OnChange Event Implementation-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Handlin</title>
+    </head>
+    <body>
+        <h1>Swastik Soft Drinks</h1>
+        <h2>215, Hosur Main Road, Kormangala, Banglore</h2>
+        <h6>Select Type of Drink:</h6>
+        <select id="myselect" onchange="myfunction(this)">
+            <option value="Juice">Juice</option>
+            <option value="Soft Drinks">Soft Drinks</option>
+            <option value="Hot Drinks">Hot Drinks</option>
+            <option value="Wine">Wine</option>
+        </select>
+        <input type="text" id="price1"/>
+
+        <script type="text/javascript">
+        function myfunction(y){
+        var x = document.getElementById("myselect").value;
+        var price;
+        if(x == 'Juice'){
+            price=50;
+        }
+        else if(x == 'Soft Drinks'){
+            price=80;
+        }
+        else if(x == 'Hot Drinks'){
+            price = 60;
+        }
+        else if(x == 'Wine'){
+            price = 100;
+        }
+        document.getElementById("price1").value=price;
+       
+        
+        }
+        </script>
+    </body>
+</html>

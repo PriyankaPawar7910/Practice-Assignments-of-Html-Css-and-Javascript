@@ -1,0 +1,33 @@
+<!--Javascript Login module-User Validation Code-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Validation</title>
+    </head>
+    <body>
+        <h2>Login User</h2>
+        <label>Username:</label>
+        <input type="text" id="name" required/></br>
+
+        <p><label>Password:</label>
+        <input type="password" id="pwd" required/></br></p>
+        <button value="Login" onclick="Valid()">Login</button>
+        <p id="demo"></p>
+        <script type="text/javascript">
+        function Valid(){
+            if(document.getElementById("name").value =="" && document.getElementById("pwd").value ==""){
+                alert("Username and Password can not be blank.");
+            }
+            else if(document.getElementById("name").value=='admin' && document.getElementById("pwd").value=='admin'){
+                
+                document.getElementById("demo").innerHTML="Valid User";
+            }
+            else{
+                document.getElementById("demo").innerHTML="Invalid User";
+            }
+
+        }
+            
+        </script>
+    </body>
+</html>

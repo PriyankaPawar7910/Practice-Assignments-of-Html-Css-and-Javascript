@@ -1,0 +1,62 @@
+<!--Javascript-Student Registration Module-Display Registration Details-->
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+        Student Registration
+    </title> 
+</head> 
+  
+<body>
+    <h1>Student Registration</h1> 
+    <p> 
+        First Name:
+        <input type="text" id="fname"/>
+    </p> 
+    <p> 
+        Last Name:
+        <input type="text" id="lname"/>
+    </p> 
+    <p> 
+        Age:
+        <input type="number" id="age"/>
+    </p> 
+      
+      
+    <p>Degree: 
+    <input type="radio" name="degree" value="MSc">MSc
+    <input type="radio" name="degree" value="MBA">MBA 
+    </p>
+      
+    <br> 
+      
+    <button type="button" onclick="displayValue()"> 
+        Submit 
+    </button>
+      
+    <br> 
+      
+    <p id="result"></p>
+ 
+      
+    <script> 
+        function displayValue() { 
+            var fname1 = document.getElementById("fname").value;
+            
+            var lname1 = document.getElementById("lname").value;
+            var age1 = document.getElementById("age").value;
+           
+         
+           
+            var ele = document.getElementsByName('degree'); 
+              
+            for(i = 0; i < ele.length; i++) { 
+                if(ele[i].checked) 
+                document.getElementById("result").innerHTML
+                        = "</br>" +fname1 + "</br>" +lname1+"</br>"+age1+"</br>"+ele[i].value; 
+            } 
+        } 
+    </script> 
+</body> 
+</html>         
