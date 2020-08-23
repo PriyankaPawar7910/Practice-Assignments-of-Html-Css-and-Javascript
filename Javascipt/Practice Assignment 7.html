@@ -1,0 +1,18 @@
+<!--Javascript String Method-->
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p>Click the button to replace "Hello" with "Hey" in the paragraph given below:</p>
+        <p id="demo">Hello welcome!</p>
+        <button onclick="myfunction()">Try it</button>
+
+        <script>
+            function myfunction() {
+                var str = document.getElementById("demo").innerHTML;
+                var txt = str.replace("Hello","Hey");
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

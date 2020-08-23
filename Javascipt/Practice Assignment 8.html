@@ -1,0 +1,24 @@
+<!--Getting Today's Date-->
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <div>
+            <h2>Today's Date:</h2>
+            <span id="calender"></span>
+            <input type="button" onclick="myfunction()" id="btn" value="Get Date"/>
+        </div>
+
+        <script>
+            function myfunction() {
+                var today = new Date();
+                var Calender = document.getElementById("calender");
+                var btn1 = document.getElementById("btn");
+                Calender.innerHTML = today.toDateString();
+                btn1.value = "Well Done!"
+
+            }
+           
+        </script>
+    </body>
+</html>

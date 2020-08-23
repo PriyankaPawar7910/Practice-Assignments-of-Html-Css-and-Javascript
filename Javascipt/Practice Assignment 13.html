@@ -1,0 +1,39 @@
+<!--Javascript Sum of Array-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum of an Array</title>
+    </head>
+    <body>
+        <p> To Enter array Click Below:
+            <input type="button" id="array" onclick="Add()" value="Enter"/>
+        </p>
+        <p>To Sum of Araay Click Below:
+
+    
+        <input type="button" onclick="Sum()" id="btn" value="Sum"/>
+        </p>
+        <p id="demo"></p>
+
+        <script>
+             var input = [];
+            function Add(){
+               
+                var size = prompt("Enter Size:");
+                for(i=0;i<size;i++){
+                    input[i] = prompt("Enter Element "+(i+1));
+                }
+                return input;
+            }
+            function Sum(){
+                var sum = 0;
+                var x = input
+                for(i=0;i<x.length;i++){
+                    sum = sum + parseInt(x[i]);
+                }
+                document.getElementById("demo").innerHTML = sum;
+
+            }
+        </script>
+    </body>
+</html>

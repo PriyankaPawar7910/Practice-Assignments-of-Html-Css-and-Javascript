@@ -1,0 +1,89 @@
+<!--Javascript Sprint Case study(1)-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toys-Add Toys Form</title>
+    
+</head>
+<body>
+    <h2>
+        <span style="background-color: #000080; color: #ff6600;">Add Toys</span>
+    </h2>
+    <table>
+        <tbody>
+            <tr>
+                <td>Toy Name</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td>Toy type</td>
+                <td><input type="text" id="type"></td>
+            </tr>
+            <tr>
+                <td>Min-Age</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Max-Age</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input type="text" id="price"></td>
+            </tr>
+            <tr>
+                <td>Quantity Available in Stock</td>
+                <td><input type="text" id="q_nbr"></td>
+            </tr>
+            <tr>
+                <td>Rental amount per day</td>
+                <td><input type="text" id="amt"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Submit Query" onclick="Validate ()"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        function Validate () {
+            var toyName = document.getElementById ("name").value;
+            var toyType = document.getElementById ("type").value;
+            var quantity = document.getElementById ("q_nbr").value;
+            var price = document.getElementById ("price").value;
+            var amount = document.getElementById ("amt").value;
+        //For Toy Name
+            if (/^([a-zA-Z0-9_-]){3,}$/.test(toyName)) {
+                alert("Name Ok");
+            } else {
+                alert("Name Not Ok");
+            }
+        //For Toy Type
+            if(/^([a-zA-Z0-9_-]){5,}$/.test(toyType)) {
+                alert("Type Ok");
+            } else {
+                alert("Type Not Ok");
+            }
+        //For Quantity and Price
+            if(!isNaN(quantity) && quantity > 0) {
+                alert("Quantity Ok");
+            } else {
+                alert("Quantity Not Ok");
+            }
+            if(!isNaN(price) && price > 0) {
+                alert("Price Ok");
+            } else {
+                alert("Price Not Ok");
+            }
+         //For Rental amount
+             if(amount >= 5) {
+                 alert("Amount Ok");
+             } else {
+                 alert("Amount Not Ok");
+             }
+
+        }
+    </script>
+</body>
+</html>

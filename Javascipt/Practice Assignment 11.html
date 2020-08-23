@@ -1,0 +1,91 @@
+<!--Case Study Sprint(3)-->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Toys-Customer Reg. Form</title>
+       
+    </head>
+    <body>
+        <h1 text-align="center">Customer Registration Form</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Customer Name</td>
+                    <td><input type="text" id="name" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="pass" /></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td><input type="password" id="c_pass" /></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td><input type="text" id="num" /></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="abc" value="Male">Male</td>
+                    <td><input type="radio" name="abc" value="Female">Female</td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <select>
+                            <option>Bengaluru</option>
+                            <option>Chennai</option>
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>
+                        <select>
+                            <option>INDIA</option>
+                            <option>USA</option>
+                            <option>GERMANY</option>
+                            <option>FRANCE</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button value="Submit" onclick="Validate ()">Submit</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script type="text/javascript"> 
+            function Validate () {
+                var name = document.getElementById("name").value;
+                var number = document.getElementById("num").value;
+                var password = document.getElementById("pass").value;
+                var c_password = document.getElementById("c_pass").value;
+                var valid = ["6","7","8","9"];
+
+                if (/[a-zA-Z]{6,}/.test(name)) {
+                    alert("Name OK");
+                } else {
+                    alert("Name Not OK");
+                }
+
+                if (password != c_password) {
+                    alert("Password do not match");
+                    document.getElementById("c_pass") = "" ;
+                }
+
+                if(/[0-9]{10}/.test(number) && valid.includes(number.substring(0,1))) {
+                    alert("Phone Number Valid");
+                } else {
+                    alert("Phone Number Not Valid");
+                }
+            }
+        </script>
+    </body>
+</html>
